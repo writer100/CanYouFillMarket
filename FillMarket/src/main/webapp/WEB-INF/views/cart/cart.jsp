@@ -4,17 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>테스트</title>
+<title>장바구니</title>
+<c:import url="../common/header.jsp"/>
 </head>
-<style>
-	.header {
-		height : 200px;
-	}
-</style>
 <body>
-	<div class="header">
-		<h1>HEADER</h1>
-	</div>
+
 
 </body>
 </html>
