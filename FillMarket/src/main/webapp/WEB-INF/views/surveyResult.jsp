@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>QNAre</title>
+<title>result</title>
 </head>
 <body>
-<h1>q</h1>
+
 </body>
 </html>
