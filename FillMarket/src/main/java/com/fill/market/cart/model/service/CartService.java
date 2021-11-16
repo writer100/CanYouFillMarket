@@ -1,22 +1,24 @@
 package com.fill.market.cart.model.service;
 
+import java.util.List;
+
 import com.fill.market.cart.model.vo.Cart;
 
-public class CartService {
+public interface CartService {
+	
+	int countCart(int pNo, String userId);
 
-	public int countCart(int pNo, String cartUserId) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	int updateCart(Cart cart);
 
-	public int updateCart(Cart cart) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	int insertCart(Cart cart);
 
-	public int cartInsert(Cart cart) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	List<Cart> listCart(String userId);
+
+	int sumPrice(String userId);
+
+	void deleteCart(int cNo);
+
+	void modifyCart(Cart cart);
+
 
 }
