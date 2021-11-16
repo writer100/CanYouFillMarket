@@ -7,10 +7,27 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Hello Spring</title>
+	<title>FillMarket</title>
+
+
 </head>
 <body>
+	<c:import url="views/common/header.jsp"/>
+	
+	<br /><br /><br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 	<h1>하이</h1>
 	<a href="${pageContext.request.contextPath}/admin/adminMain.do">어드민페이지</a>
+	<div>인덱스입니다</div>
+	
+	<c:import url="views/common/footer.jsp"/>
 </body>
 </html>
