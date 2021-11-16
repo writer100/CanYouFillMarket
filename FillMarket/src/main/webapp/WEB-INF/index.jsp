@@ -8,8 +8,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Hello Spring</title>
+<style>
+header {
+	height: 230px;
+	background-color: lightgrey;
+}
+</style>
 </head>
 <body>
-	<h1>하이</h1>
+	<header>Header</header>
+	<ol>
+		<li><a href="${pageContext.request.contextPath}/views/cartList.jsp">장바구니</a></li>
+	</ol>
 </body>
 </html>
