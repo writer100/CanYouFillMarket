@@ -5,7 +5,8 @@
 	
 	<!-- 1. 장바구니 추가 -->
 	<insert id="insertCart">
-		INSERT INTO CART ()
+		INSERT INTO CART (CARTNO, CARTUSERID, PNO, AMOUNT, PNAME, PPRICE, ORDERPRICE)
+		VALUES (SEQ_CARTNO.NEXTVAL, #{ cartNo }, #{ pNo }, #{ amount }, #{ pName }, )
 	</insert>
 	
 	<!-- Access to #{ field } -->
