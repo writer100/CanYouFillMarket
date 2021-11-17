@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>QNA</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h1>QNA</h1>
+
 </body>
 </html>

@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>test</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h1>테스트 파일 건들면 죽인다.</h1>
+
 </body>
 </html>
