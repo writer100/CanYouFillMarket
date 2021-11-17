@@ -3,66 +3,43 @@ package com.fill.market.product.model.service;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fill.market.product.model.vo.Attachment;
-import com.fill.market.product.model.vo.Product;
+import com.fill.market.admin.model.vo.PAttachment;
+import com.fill.market.admin.model.vo.Product;
+import com.fill.market.product.model.dao.ProductDAO;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
+	
+	@Autowired
+	ProductDAO productDAO;
+	
 	@Override
 	public List<Map<String, String>> selectProductList(int cPage, int numPerPage) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return productDAO.selectProductList(cPage, numPerPage);
 	}
 
 	@Override
 	public int selectProductTotalContents() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return productDAO.selectProductTotalContents();
+	}
+
+
+	@Override
+	public Product selectOneProduct(int pNo) {
+		
+		return productDAO.selectOneProduct(pNo);
 	}
 
 	@Override
-	public int insertProduct(Product product, List<Attachment> attachList) {
-		// TODO Auto-generated method stub
-		return 0;
+	public List<PAttachment> selectPAttachmentList(int pNo) {
+		
+		return productDAO.selectPAttachmentList(pNo);
 	}
 
-	@Override
-	public Product selectOneProduct(int productNo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Attachment> selectAttachmentList(int productNo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Product updateView(int productNo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int updateProduct(Product product, List<Attachment> attachList) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int deleteProduct(int productNo) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int deleteFile(int attNo) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }
