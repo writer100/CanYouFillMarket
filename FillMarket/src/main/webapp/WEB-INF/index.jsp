@@ -17,8 +17,10 @@ header {
 </head>
 <body>
 	<header>Header</header>
-	<ol>
-		<li><a href="${pageContext.request.contextPath}/views/cartList.jsp">장바구니</a></li>
-	</ol>
+
+
+	<h1>하이</h1>
+	<div>test</div>
+
 </body>
 </html>
