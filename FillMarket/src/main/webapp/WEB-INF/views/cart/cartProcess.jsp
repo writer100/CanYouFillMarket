@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>장바구니</title>
-<c:import url="../common/header.jsp"/>
+<title>Insert title here</title>
 </head>
 <body>
-
-
+	<p>test</p>
 </body>
 </html>

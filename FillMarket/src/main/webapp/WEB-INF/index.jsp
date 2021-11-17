@@ -7,8 +7,6 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>FillMarket</title>
-
 
 </head>
 <body>
@@ -29,5 +27,6 @@
 	<div>인덱스입니다</div>
 	
 	<c:import url="views/common/footer.jsp"/>
+
 </body>
 </html>
