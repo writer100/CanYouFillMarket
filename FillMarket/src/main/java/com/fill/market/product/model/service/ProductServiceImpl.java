@@ -3,9 +3,12 @@ package com.fill.market.product.model.service;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import com.fill.market.product.model.vo.Attachment;
 import com.fill.market.product.model.vo.Product;
 
+@Service
 public class ProductServiceImpl implements ProductService {
 
 	@Override
