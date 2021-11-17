@@ -3,7 +3,7 @@ package com.fill.market.product.model.dao;
 import java.util.List;
 import java.util.Map;
 
-import com.fill.market.product.model.vo.Attachment;
+import com.fill.market.product.model.vo.PAttachment;
 import com.fill.market.product.model.vo.Product;
 
 public interface ProductDAO {
@@ -12,17 +12,8 @@ public interface ProductDAO {
 
 	int selectProductTotalContents();
 
-	int insertProduct(Product product, List<Attachment> attachList);
+	Product selectOneProduct(int pNo);
 
-	Product selectOneProduct(int productNo);
-
-	List<Attachment> selectAttachmentList(int productNo);
-
-	Product updateView(int productNo);
+	List<PAttachment> selectPAttachmentList(int pNo);
 	
-	int updateProduct(Product product, List<Attachment> attachList);
-	
-	int deleteProduct(int productNo);
-
-	int deleteFile(int attNo);	
 }

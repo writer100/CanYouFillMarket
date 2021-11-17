@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Component
-public class Attachment implements Serializable{
+public class PAttachment implements Serializable{
 		
 	private static final long serialVersionUID = 49895L;
 	

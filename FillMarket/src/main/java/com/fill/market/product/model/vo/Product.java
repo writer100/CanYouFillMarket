@@ -20,8 +20,8 @@ public class Product implements Serializable {
 	private int cNo;
 	private String pName;
 	private int pPrice;
-	private String piinfo;
-	private String fPprec;
+	private String pInfo;
+	private String fPrec;
 	private Date pEnroll;
 	private int pStock;
 	private int pSell;
