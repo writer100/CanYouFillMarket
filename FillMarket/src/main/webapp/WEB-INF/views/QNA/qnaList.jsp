@@ -7,59 +7,177 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>게시판</title>
-	<c:import url="../common/header.jsp"/>
-	<style>
-		/*글쓰기버튼*/
-		input#btn-add{float:right; margin: 0 0 15px;}
-	</style>
-	<script>
-		function fn_goBoardForm(){
-			location.href = "${pageContext.request.contextPath}/board/boardForm.do";
-		}
-		
-		$(function(){
-			$("tr[id]").on("click",function(){
-				var boardNo = $(this).attr("id");
-				console.log("bordNo="+boardNo);
-				location.href = "${pageContext.request.contextPath}/board/boardView.do?no="+boardNo;
-			});
-		});
-	</script>
+	<title>공지사항</title>
+    <link rel="stylesheet" href="../resources/css/style.css"> 
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        
+    </style>
 </head>
+
 <body>
-	<div id="container">
-		<c:import url="../common/menubar.jsp"/>
-			<section id="board-container" class="container">
-				<p>총 ${totalContents }건의 게시물이 있습니다.</p>
-				<input type="button" value="글쓰기" id="btn-add" class="btn btn-outline-success" onclick="fn_goBoardForm();"/>
-				<table id="tbl-board" class="table table-striped table-hover">
-					<tr>
-						<th>번호</th>
-						<th>제목</th>
-						<th>작성자</th>
-						<th>작성일</th>
-						<th>첨부파일</th>
-						<th>조회수</th>
-					</tr>
-					<c:forEach items="${list}" var="b"> 
-					<tr id="${b.boardNo}">
-						<td>${b.boardNo}</td>
-						<td>${b.boardTitle}</td>
-						<td>${b.boardWriter}</td>
-						<td>${b.boardDate}</td>
-						<td align="center">
-							<c:if test="${b.fileCount>0}">
-								<img alt="첨부파일" src="${pageContext.request.contextPath}/resources/images/file.png" width=16px>
-							</c:if>
-						</td>
-						<td>${b.boardReadCount }</td>
-					</tr>
-					</c:forEach>
-				</table>
-				<c:out value="${pageBar}" escapeXml="false"/>
-			</section> 
-		<c:import url="../common/footer.jsp"/>
-	</div>
+    <br><br><br>
+    <div class="board_list_wrap">
+        <div class="faq">
+            <div class="board_title">
+                <div class="board_title_a">FAQ</div>
+                <div class="board_title_b">자주묻는 질문들</div>
+                
+            </div>
+                <div class="faq_button">
+                    <div class="main">
+                        <input type="radio" id="tab-1" name="show" checked />
+                        <input type="radio" id="tab-2" name="show" />
+                        <input type="radio" id="tab-3" name="show" />
+                        <input type="radio" id="tab-4" name="show" />
+                        <div class="tab">
+                            <label for="tab-1">주문/결제</label>
+                            <label for="tab-2">배송 문의</label>
+                            <label for="tab-3">교환/반품</label>
+                            <label for="tab-4">기타 문의</label>
+                        </div>
+                        <div class="content">
+                            <div class="content-dis">
+                                <button class="accordion">메뉴 1</button>
+                                <div class="panel">
+                                    <p>내용 1</p>
+                                </div>
+
+                                <button class="accordion">메뉴 2</button>
+                                <div class="panel">
+                                    <p>내용 2</p>
+                                </div>
+
+                                <button class="accordion">메뉴 3</button>
+                                <div class="panel">
+                                    <p>내용 3</p>
+                                </div>
+                            </div>
+                            <div class="content-dis">
+                                <div class="content-dis">
+                                    <button class="accordion">메뉴 1</button>
+                                    <div class="panel">
+                                        <p>내용 1</p>
+                                    </div>
+
+                                    <button class="accordion">메뉴 2</button>
+                                    <div class="panel">
+                                        <p>내용 2</p>
+                                    </div>
+
+                                    <button class="accordion">메뉴 3</button>
+                                    <div class="panel">
+                                        <p>내용 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-dis">
+                                <div class="content-dis">
+                                    <button class="accordion">메뉴 1</button>
+                                    <div class="panel">
+                                        <p>내용 1</p>
+                                    </div>
+
+                                    <button class="accordion">메뉴 2</button>
+                                    <div class="panel">
+                                        <p>내용 2</p>
+                                    </div>
+
+                                    <button class="accordion">메뉴 3</button>
+                                    <div class="panel">
+                                        <p>내용 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-dis">
+                                <div class="content-dis">
+                                    <button class="accordion">메뉴 1</button>
+                                    <div class="panel">
+                                        <p>내용 1</p>
+                                    </div>
+
+                                    <button class="accordion">메뉴 2</button>
+                                    <div class="panel">
+                                        <p>내용 2</p>
+                                    </div>
+
+                                    <button class="accordion">메뉴 3</button>
+                                    <div class="panel">
+                                        <p>내용 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+
+                        <div class="board_title">
+                            <div class="board_title_a">Q&A</div>
+                            <div class="board_title_b">고객센터</div>
+                            
+                        </div>    
+                            <div class="board_list">
+                                <div class="board_list_head">
+                                    <div class="num">No</div>
+                                    <div class="tit">제목</div>
+                                    <div class="writer">글쓴이</div>
+                                    <div class="date">작성일</div>
+                                </div>
+                                <div class="board_list_body">
+                                    <div class="item">
+                                        <div class="num">3</div>
+                                        <div class="tit"><a href="#">asdasdasdasd</a></div>
+                                        <div class="writer">관리자</div>
+                                        <div class="date">2019-11-02</div>
+
+                                    </div>
+                                    <div class="item">
+                                        <div class="num">2</div>
+                                        <div class="tit"><a href="#">asdsadasd</a></div>
+                                        <div class="writer">관리자</div>
+                                        <div class="date">2019-10-28</div>
+
+                                    </div>
+                                    <div class="item">
+                                        <div class="num">1</div>
+                                        <div class="tit"><a href="#">asdasdasd</a></div>
+                                        <div class="writer">관리자</div>
+                                        <div class="date">2019-10-24</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paging">
+                                <a href="#" class="bt first">처음 페이지</a>
+                                <a href="#" class="bt prev">이전 페이지</a>
+                                <a href="#" class="num on">1</a>
+                                <a href="#" class="num">2</a>
+                                <a href="#" class="num">3</a>
+                                <a href="#" class="bt next">다음 페이지</a>
+                                <a href="#" class="bt last">마지막 페이지</a>
+                            </div>
+                        </div>
+                        <div class="buttonQ">
+                            <input type="button" value="글쓰기"
+                                onclick="location.href='${pageContext.request.contextPath}/board/boardDelete.do?boardNo=${board.boardNo}'" />
+
+                        </div>
+                        <script>
+                            var acc = document.getElementsByClassName("accordion");
+                            var i;
+
+                            for (i = 0; i < acc.length; i++) {
+                                acc[i].addEventListener("click", function () {
+                                    this.classList.toggle("active");
+                                    var panel = this.nextElementSibling;
+                                    if (panel.style.maxHeight) {
+                                        panel.style.maxHeight = null;
+                                    } else {
+                                        panel.style.maxHeight = panel.scrollHeight + "px";
+                                    }
+                                });
+                            }
+                        </script>
 </body>
 </html>
