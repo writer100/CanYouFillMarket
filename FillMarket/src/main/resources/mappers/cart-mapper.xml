@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cartSQL">
+	
+	<!-- 1. 장바구니 추가 -->
+	<insert id="insertCart">
+		INSERT INTO CART (CARTNO, CARTUSERID, PNO, AMOUNT, PNAME, PPRICE, ORDERPRICE)
+		VALUES (SEQ_CARTNO.NEXTVAL, #{ cartNo }, #{ pNo }, #{ amount }, #{ pName }, )
+	</insert>
+	
+	<!-- Access to #{ field } -->
+</mapper>

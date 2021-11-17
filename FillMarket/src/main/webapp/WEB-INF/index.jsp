@@ -8,9 +8,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Hello Spring</title>
+<style>
+header {
+	height: 230px;
+	background-color: lightgrey;
+}
+</style>
 </head>
 <body>
+	<header>Header</header>
+
+
 	<h1>하이</h1>
 	<div>test</div>
+
 </body>
 </html>
