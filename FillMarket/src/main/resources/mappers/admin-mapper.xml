@@ -54,6 +54,7 @@
 	<delete id="deleteFile" parameterType="int">
 		DELETE FROM PATTACHMENT WHERE PANO = #{ attNo }
 	</delete>
+<<<<<<< HEAD
 		
 	<update id="updateProduct" parameterType="Product">
 		UPDATE PRODUCT SET CNO = #{cno}, PNAME = #{ pname }, PSTOCK = #{ pstock }, PPRICE = #{ pprice }, PINFO = #{pinfo}, FPREC = #{fprec}
@@ -91,5 +92,27 @@
 	<select id="selectUserTotalContents" resultType="int">
 		SELECT COUNT(*) FROM MEMBER
 	</select>
+=======
+	
+	<!-- gg -->
+	
+	<update id="updateProduct" parameterType="Product">
+		UPDATE PRODUCT SET CNO = #{cno}, PNAME = #{ pname }, PSTOCK = #{ pstock }, PPRICE = #{ pprice }, PINFO = #{pinfo}, FPREC = #{fprec}
+		WHERE PNO = #{ pno }
+	</update>
+	
+	<insert id="updateAttachment" parameterType="PAttachment">
+		INSERT INTO PATTACHMENT VALUES (SEQ_PANO.NEXTVAL, #{ pno },
+										#{ originalname }, #{ changename }, SYSDATE, 'Y' )
+	</insert>
+	
+	<delete id="deleteAttachment" parameterType="int">
+		DELETE FROM PATTACHMENT WHERE PNO = #{ pno }
+	</delete>
+	
+	<delete id="deleteProdcut" parameterType="int">
+		DELETE FROM PRODUCT WHERE PNO = #{ pno }
+	</delete>
+>>>>>>> branch 'Hwan' of https://github.com/writer100/CanYouFillMarket.git
 
 </mapper>

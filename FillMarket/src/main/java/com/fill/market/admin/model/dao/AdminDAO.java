@@ -65,6 +65,7 @@ public class AdminDAO {
 	}
 
 	public int updateAttachment(PAttachment a) {
+<<<<<<< HEAD
 		
 		return sqlSession.insert("adminSQL.updateAttachment", a);
 	}
@@ -95,6 +96,15 @@ public class AdminDAO {
 	public int selectUserTotalContents() {
 		
 		return sqlSession.selectOne("adminSQL.selectUserTotalContents");
+=======
+		// TODO Auto-generated method stub
+		return sqlSession.insert("adminSQL.updateAttachment", a);
+	}
+
+	public int deleteProduct(int pno) {
+		
+		return sqlSession.delete("adminSQL.deleteProdcut", pno);
+>>>>>>> branch 'Hwan' of https://github.com/writer100/CanYouFillMarket.git
 	}
 
 }

@@ -36,6 +36,7 @@ section #headerreg {
 }
 
 #titleh {
+<<<<<<< HEAD
 	
 	margin-bottom: 60px;
 	margin-left: 400px;
@@ -43,6 +44,17 @@ section #headerreg {
 	width: 200px;
 	text-align: center;
 	
+=======
+	top: 100px;
+	margin-bottom: 60px;
+	margin-left: 400px;
+	border: black 1px solid;
+	width: 200px;
+	text-align: center;
+	background: rgb(231, 133, 110);
+	color: white;
+	border-radius: 10px;
+>>>>>>> branch 'Hwan' of https://github.com/writer100/CanYouFillMarket.git
 }
 </style>
 

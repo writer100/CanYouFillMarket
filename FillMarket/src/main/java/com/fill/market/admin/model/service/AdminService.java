@@ -100,6 +100,7 @@ public class AdminService {
 		return adminDAO.deleteProduct(pno);
 	}
 
+<<<<<<< HEAD
 	
 	
 	
@@ -117,4 +118,6 @@ public class AdminService {
 		return adminDAO.selectUserTotalContents();
 	}
 
+=======
+>>>>>>> branch 'Hwan' of https://github.com/writer100/CanYouFillMarket.git
 }
