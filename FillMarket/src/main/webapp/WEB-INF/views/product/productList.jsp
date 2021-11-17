@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>상품 목록</title>
-	<!-- 헤더 -->
+	<c:import url="../common/header.jsp"/>
 	<style>
 		/*장바구니버튼*/
 		input#btn-add{float:right; margin: 0 0 15px;}
@@ -21,99 +21,42 @@
 		$(function(){
 			$("div[id]").on("click",function(){
 				var pNo = $(this).attr("id");
-				console.log("PNo="+PNo);
-				location.href = "${pageContext.request.contextPath}/cart/cart.do?pno="+PNo;
+				console.log("pNo="+pNo);
+				location.href = "${pageContext.request.contextPath}/cart/cart.do?no="+pNo;
 			});
 		});
 	</script>
 </head>
 <body>
 	<div id="container">
-	  <!-- 네비게이터 바 -->
-	  
+	  <c:import url="../common/menubar.jsp"/>
 	    <div class="row product">
 	        <!-- 검색창 -->
 	        <form class="">
 		        <div role="group" class="input-group d-flex align-items-center justify-content-center my-3"><!---->
 			        <input type="text" placeholder="제품명, 브랜드를 입력하세요" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px inset; border-radius: 2px; border: 0px;" id="productSearch">
 			        <button type="submit" class="btn p-0 btn-link">
-			        	검색
+			        	<i class="icon icon-search text-32 text-primary" style="line-height: 0;"></i>
 			        </button>
 		        </div>
 	        </form>
 	        <!-- 상품리스트 -->
-	        <div class="col-4">
+	     	<c:forEach items="${list}" var="product" >
 	        <div class="card" style="width: 18rem;">
 			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
+			  <div class="card-body" id="${ product.pNo }">
+			    <h5 class="card-title">${ product.pName }</h5>
+			    <p class="card-text">${ product.pPrice }</p>
+			    <button type="button" class="btn btn-outline-info" onclick="insertcart(${ product.pNo });">장바구니 담기</button>
 			  </div>
 			</div>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
-			  </div>
-			</div>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
-			  </div>
-			</div>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
-			  </div>
-			</div>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
-			  </div>
-			</div>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
-			  </div>
-			</div>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
-			  </div>
-			</div>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body" id="${ product.PNo }">
-			    <h5 class="card-title">${ product.PName }</h5>
-			    <p class="card-text">${ product.PPrice }</p>
-			    <button type="button" class="btn btn-outline-info" onclick="goCart(${ product.PNo });">장바구니 담기</button>
-			  </div>
-			</div>
-	        </div>
+	        </c:forEach>
 	        <!-- 페이지 번호 -->
 	        <div class="ListNum">
 	           <c:out value=" ${pageBar}" escapeXml="false"/>
 	        </div>
 	    </div>
-	<!-- 푸터 -->
+	<c:import url="../common/footer.jsp"/>
 	</div>
 </body>
 </html>

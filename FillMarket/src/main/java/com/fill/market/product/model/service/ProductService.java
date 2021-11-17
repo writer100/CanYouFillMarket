@@ -3,7 +3,7 @@ package com.fill.market.product.model.service;
 import java.util.List;
 import java.util.Map;
 
-import com.fill.market.product.model.vo.PAttachment;
+import com.fill.market.product.model.vo.Attachment;
 import com.fill.market.product.model.vo.Product;
 
 public interface ProductService {
@@ -12,8 +12,17 @@ public interface ProductService {
 
 	int selectProductTotalContents();
 
-	Product selectOneProduct(int pNo);
+	int insertProduct(Product product, List<Attachment> attachList);
 
-	List<PAttachment> selectPAttachmentList(int pNo);
+	Product selectOneProduct(int productNo);
 
+	List<Attachment> selectAttachmentList(int productNo);
+
+	Product updateView(int productNo);
+	
+	int updateProduct(Product product, List<Attachment> attachList);
+	
+	int deleteProduct(int productNo);
+
+	int deleteFile(int attNo);
 }

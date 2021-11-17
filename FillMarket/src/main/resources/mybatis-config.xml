@@ -12,11 +12,6 @@
  	<!-- #2 Java full package class access to alias  -->
  	<typeAliases>
  		<!-- <typeAlias alias="Member" type="com.kh.spring.member.model.vo.Member" />  -->
- 		<typeAlias alias="Product" type="com.fill.market.admin.model.vo.Product"/>
- 		<typeAlias alias="PAttachment" type="com.fill.market.admin.model.vo.PAttachment"/>
-<<<<<<< HEAD
- 		<typeAlias alias="Member" type="com.fill.market.admin.model.vo.Member"/>
-=======
->>>>>>> branch 'Hwan' of https://github.com/writer100/CanYouFillMarket.git
+ 		
  	</typeAliases>
  </configuration>

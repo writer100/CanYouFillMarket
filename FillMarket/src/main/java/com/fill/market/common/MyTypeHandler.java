@@ -1,4 +1,4 @@
-package com.kh.spring.common;
+package com.fill.market.common;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -18,7 +18,7 @@ import org.apache.ibatis.type.TypeHandler;
  *   1. ResultSet에서 컬럼 이름으로 값을 가져오는 방법
  *   2. ResultSet에서 컬럼 숫자로 값을 가져오는 방법
  *   3. PL/SQL 프로시저를 위한 값을 가져오는 방법
- * @author user1
+ * 
  *
  */
 public class MyTypeHandler implements TypeHandler<String[]> {

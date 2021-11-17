@@ -3,43 +3,63 @@ package com.fill.market.product.model.dao;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.session.RowBounds;
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-
-import com.fill.market.product.model.vo.PAttachment;
+import com.fill.market.product.model.vo.Attachment;
 import com.fill.market.product.model.vo.Product;
 
-@Repository
 public class ProductDAOImpl implements ProductDAO {
-	@Autowired
-	SqlSessionTemplate sqlSession;
-	
+
 	@Override
 	public List<Map<String, String>> selectProductList(int cPage, int numPerPage) {
-		RowBounds rows = new RowBounds((cPage - 1 )* numPerPage, numPerPage);
-		
-		return sqlSession.selectList("productSQL.selectProductList", null, rows);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public int selectProductTotalContents() {
-		
-		return sqlSession.selectOne("productSQL.selectProductTotalContents");
-	}
-
-
-	@Override
-	public Product selectOneProduct(int pNo) {
-		
-		return sqlSession.selectOne("productSQL.selectOneProduct", pNo);
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
-	public List<PAttachment> selectPAttachmentList(int pNo) {
-		
-		return sqlSession.selectList("productSQL.selectPAttachmentList", pNo);
+	public int insertProduct(Product product, List<Attachment> attachList) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Product selectOneProduct(int productNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Attachment> selectAttachmentList(int productNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product updateView(int productNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int updateProduct(Product product, List<Attachment> attachList) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteProduct(int productNo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteFile(int attNo) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
