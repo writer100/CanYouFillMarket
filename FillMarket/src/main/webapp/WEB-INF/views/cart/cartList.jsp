@@ -123,11 +123,10 @@ header {
 								<c:forEach var="cartList" items="${map.list}" varStatus="i">
 									<tr>
 										<td id="productImg">
-											<!-- <img src="${ cartLst.thumgImg }"> --> <img
-											src="images/childLife.png">
+											<!-- <img src="${ cartLst.thumgImg }"> --> 
+											<img src="images/childLife.png">
 										</td>
-										<td style="text-align: left;"><h5>ChildLife 차일드라이프
-												비타민D3 천연 베리맛 30ml</h5></td>
+										<td style="text-align: left;"><h5>ChildLife 차일드라이프 비타민D3 천연 베리맛 30ml</h5></td>
 										<td>
 											<!-- <fmt:formatNumber pattern="###,###,###" value="${ cartList.pPrice }"/> -->
 											70,000
