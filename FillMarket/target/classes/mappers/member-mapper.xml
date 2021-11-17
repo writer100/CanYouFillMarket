@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="memberSQL">
-	<!-- 
-	<select id="loginMember" parameterType="Member" resultType="Member">
-		SELECT * FROM MEMBER
-		WHERE USERID = #{ userId } AND PASSWORD = #{ password }
+
+<mapper namespace="productSQL">
+
+	<select id="selectProductList" resultType="com.fill.market.product.model.vo.Product">
+		SELECT P.*, (SELECT COUNT(*) FROM PATTACHMENT WHERE PNO = P.PNO) FILECOUNT
+		FROM PRODUCT P
+		ORDER BY PENROLL DESC, PNO DESC
 	</select>
-	 -->
-	<!-- Access to #{ field } -->
+	
+	<select id="selectProductTotalContents" resultType="int">
+		SELECT COUNT(*) FROM PRODUCT
+	</select>
+	
+	<select id="selectOneProduct" parameterType="int" resultType="com.fill.market.product.model.vo.Product">
+		SELECT * FROM PRODUCT WHERE BOARDNO = #{ pNo }
+	</select>
+	
+	<select id="selectPAttachmentList" parameterType="int" resultType="com.fill.market.product.model.vo.PAttachment">
+		SELECT *FROM PATTACHMENT WHERE PRODUCTNO = #{ pNo }
+	</select>
+
 </mapper>
