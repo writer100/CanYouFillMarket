@@ -11,7 +11,11 @@
  	
  	<!-- #2 Java full package class access to alias  -->
  	<typeAliases>
- 		<typeAlias alias="Cart" type="com.fill.market.cart.model.vo.Cart"/>
+ 		<!-- <typeAlias alias="Member" type="com.kh.spring.member.model.vo.Member" />  -->
+ 		<typeAlias alias="Product" type="com.fill.market.admin.model.vo.Product"/>
+ 		<typeAlias alias="PAttachment" type="com.fill.market.admin.model.vo.PAttachment"/>
+ 		<typeAlias alias="Member" type="com.fill.market.admin.model.vo.Member"/>
+ 		
  		
  	</typeAliases>
  </configuration>

@@ -1,18 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-
-<!DOCTYPE html>
-<html lang="kor">
-<head>
-    <meta charset="UTF-8">
-    <title>헤더</title>
-
-    
-    <style>
-        @charset "UTF-8";
+@charset "UTF-8";
 * {
     margin: 10;
     padding: 0;
@@ -98,25 +84,79 @@ header .head-wrap-sub ul li a:hover{
     background-color: #2c2a29;
     color:var( --color-font-green);
 }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="head-wrap">
-            <div class="head-wrap-inner">
-                <a class="navbar-brand" href="#"> <img class="head-logo"
-                    src="${pageContext.request.contextPath }/resources/images/logo.png">
-                </a>
-                <nav class="head-menu-top-nav">
-                    <ul>
-                        <li class="top-nav01"><a href="#">MY PAGE</a></li>
-                        <li class="top-nav02"><a href="#">MY HEART</a></li>
-                        <li class="top-nav03"><a href="#">SHOPPING BAG</a></li>
-                        <li class="top-nav03"><a href="${pageContext.request.contextPath}/member/memberLogin.do">LOGIN / JOIN</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    footer{
+    	position: absolute;
+    	bottom: 0;
+    }
+    
+    *{
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    .col-md1 {
+        float: left;
+        width: 20%;
+    }
+    .col-md2 {
+        float: left;
+        width: 28%;
+    }
+    .col-md3 {
+        float: left;
+        width: 21%;
+    }
+    .col-md4 {
+        float: left;
+        width: 21%;
+    }
+
+    .footer_aray {
+        border-bottom: lightgray 1px solid;
+    }
+    .footer-top {
+        color: rgb(231, 133, 110);
+        text-align: center;
+    }
+    footer a {
+        text-decoration: none;
+        color: black;
+    }
+    #footer-mid-size1 {
+        width: 268px;
+        text-align: right;
+    }
+    #footer-mid-size2 {
+        width: 251px;
+        text-align: right;
+    }
+
+    #footer-mid-size4 {
+        width: 312px;
+        text-align: right;
+    }
+    .footer-menu {
+        list-style: none;
+    }
+    #footer-menu-size1 {
+        width: 300px;
+        margin-left: 55px;
+    }
+    #footer-menu-size2 {
+        margin-left: 115px;
+    }
+    #footer-menu-size3 {
+        width: 300px;
+        padding-top: 15px;
+        margin-left: 63px;
+    }
+    #footer-menu-size4 {
+        width: 300px;
+        margin-left: 87px;
+    }
+    .footer_bottom {
+        width: 100%;
+        position:absolute;
+        top: 220px;
+        padding-left: 80px;
+        border-top: lightgray 1px solid;
+    }
