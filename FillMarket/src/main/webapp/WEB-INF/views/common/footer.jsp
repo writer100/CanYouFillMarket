@@ -4,139 +4,68 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
-<html lang="kor">
-<head>
-    <meta charset="UTF-8">
-    <title>푸터</title>
-    <style>
-        @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-    footer{
-    	position: absolute;
-    	bottom: 0;
-    }
-    
-    *{
-        font-family: 'Nanum Gothic', sans-serif;
-    }
-    .col-md1 {
-        float: left;
-        width: 20%;
-    }
-    .col-md2 {
-        float: left;
-        width: 28%;
-    }
-    .col-md3 {
-        float: left;
-        width: 21%;
-    }
-    .col-md4 {
-        float: left;
-        width: 21%;
-    }
 
-    .footer_aray {
-        border-bottom: lightgray 1px solid;
-    }
-    .footer-top {
-        color: rgb(231, 133, 110);
-        text-align: center;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    #footer-mid-size1 {
-        width: 268px;
-        text-align: right;
-    }
-    #footer-mid-size2 {
-        width: 251px;
-        text-align: right;
-    }
+<div class="container footer-0affix affix-item">
+	<footer class="py-5">
+		<div class="row py-4">
+			<div class="col-3">
+				<h5 class="footer-head">회사정보</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2 p-0 text-dark">CanYouPillMarket.</li>
+					<li class="nav-item mb-1 p-0 text-secondary">상 &nbsp;&nbsp; 호
+						&nbsp;&nbsp;: 약사조</li>
+					<li class="nav-item mb-1 p-0 text-secondary">대 &nbsp;&nbsp; 표
+						&nbsp;&nbsp;: 약사조</li>
+					<li class="nav-item mb-2 p-0 text-secondary">서울특벽시 강남구 테헤란로 130 <br>
+					(역삼동 823-23)5층 352반
+					</li>
+				</ul>
+			</div>
 
-    #footer-mid-size4 {
-        width: 312px;
-        text-align: right;
-    }
-    .footer-menu {
-        list-style: none;
-    }
-    #footer-menu-size1 {
-        width: 300px;
-        margin-left: 55px;
-    }
-    #footer-menu-size2 {
-        margin-left: 115px;
-    }
-    #footer-menu-size3 {
-        width: 300px;
-        padding-top: 15px;
-        margin-left: 63px;
-    }
-    #footer-menu-size4 {
-        width: 300px;
-        margin-left: 87px;
-    }
-    .footer_bottom {
-        width: 100%;
-        position:absolute;
-        top: 220px;
-        padding-left: 80px;
-        border-top: lightgray 1px solid;
-    }
-    </style>
-</head>
-<body>
-    <footer>
-        <div class="footer_aray">
-            <div class="col-md1">
-                <h2 class="footer-top">회사정보</h2>
-                <h3 id="footer-mid-size1" class="footer-mid">Can You Pill Market</h3>
-                <ul id="footer-menu-size1" class="footer-menu">
-                    <li>상호명&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 캔유필마켓</li>
-                    <li>대&nbsp;&nbsp;&nbsp;&nbsp;표 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;약사조</li>
-                    <li>주&nbsp;&nbsp;&nbsp;&nbsp;소 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서울특별시 강남구 테헤란로 130
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(역삼동
-                        823-23)5층 352반</li>
-                </ul>
-            </div>
-            <div class="col-md2">
-                <h2 class="footer-top">고객센터</h2>
-                <h3 id="footer-mid-size2" class="footer-mid">1234-1234</h3>
-                <ul id="footer-menu-size2" class="footer-menu">
-                    <li>WEEK&nbsp;&nbsp;&nbsp;&nbsp; 09:00 ~ 18:00</li>
-                    <li>LUNCH&nbsp;&nbsp;13:00 ~ 14:00</li> <br>
-                    주말, 공휴일은 휴무입니다.
-                </ul>
-            </div>
+			<div class="col-3">
+				<h5 class="footer-head">고객센터</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2 p-0 text-dark">1234-1234</li>
+					<li class="nav-item mb-1 p-0 text-secondary">WEEK
+						&nbsp;&nbsp;&nbsp;: 09:00 ~ 18:00</li>
+					<li class="nav-item mb-1 p-0 text-secondary">LUNCH &nbsp;:
+						13:00 ~ 14:00</li>
+					<li class="nav-item mb-2 p-0 text-secondary">주말, 공휴일은 휴무입니다.</li>
+				</ul>
+			</div>
 
-            <div id="footer-size3" class="col-md3">
-                <h2 class="footer-top">계좌정보</h2>
+			<div class="col-3">
+				<h5 class="footer-head">계좌정보</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2 p-0 text-dark">예금주 &nbsp;&nbsp; :
+						캔유필마켓</li>
+					<li class="nav-item mb-1 p-0 text-secondary">농 &nbsp;&nbsp; 협
+						&nbsp;&nbsp;: 123-1234-1234-11</li>
+					<li class="nav-item mb-1 p-0 text-secondary">국 &nbsp;&nbsp; 민
+						&nbsp;&nbsp;: 123465-01-1234567</li>
+					<li class="nav-item mb-1 p-0 text-secondary">우체국 &nbsp;&nbsp;
+						: 123456-02-123456</li>
+				</ul>
+			</div>
 
-                <ul id="footer-menu-size3" class="footer-menu">
-                    <li>농협&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 123-1234-1234-11</li>
-                    <li>국민&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 123456-01-1234567</li>
-                    <li>우체국&nbsp;&nbsp;123456-02-123456</li> <br>
-                    예금주 : 캔유필마켓
-                </ul>
-            </div>
+			<div class="col-3">
+				<h5 class="footer-head">반품</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#"
+						class="nav-link p-0 text-dark">교환/반품 정책 확인 ▶︎</a></li>
 
-            <div class="col-md4">
-                <h2 class="footer-top">반품</h2>
-                <h3 id="footer-mid-size4" class="footer-mid"><a href="#">교환/반품 정책 확인 ▶︎</a></h3>
-                <ul id="footer-menu-size4" class="footer-menu">
-                    <li>서울특별시 강남구 테헤란로 130 <br>(역삼동 823-23)5층 352반 <br>
-                        캔유필마켓 앞</li>
-                </ul>
-            </div>
-            <div class="footer_bottom">
-                <p>COPYRIGHT Ⓒ2021 CANYOUPILLMARKET, ALL RIGHTS RESERVED. FINALPROJECT | KH Academy reserved by Gichang, Jieun, Changhwan, Yeji, SeungByung.</p>
-            </div>
-        </div>
+					<li class="nav-item mb-1 p-0 text-secondary">서울특별시 강남구 테헤란로
+						130</li>
+					<li class="nav-item mb-1 p-0 text-secondary">(역삼동 823-23)5층
+						352반</li>
+					<li class="nav-item mb-1 p-0 text-secondary">캔유필마켓 앞</li>
+				</ul>
+			</div>
 
-        </div>
-    </footer>
-</body>
-</html>
+			<div class="d-flex justify-content-between py-1 my-1 border-top">
+				<p>COPYRIGHT Ⓒ 2021 CANYOUPILLMARKET, ALL RIGHTS RESERVED.
+					FINALPROJECT KH Academy reserved by Gichang, Jieun, Changhwan,
+					Yeji, SeungByung.</p>
+			</div>
+	</footer>
+</div>

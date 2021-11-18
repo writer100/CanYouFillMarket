@@ -1,162 +1,85 @@
 @charset "UTF-8";
-* {
-    margin: 10;
-    padding: 0;
-    color:var(--color-font-black);
-    font-family: var(--font-family);
-}
-header{
-    position: fixed;
-    top:0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-}
-header .head-wrap .head-wrap-inner{
-    position: absolute;
-    top:10px;
-    right: 40px;
-    border-radius: 5px;
-    width: 34px;
-    height: 34px;
-}
-header .head-wrap .head-wrap-inner{
-    position: absolute;
-    top: 7px;
-    left: 7px;
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
-
-header .head-wrap .head-wrap-inner{
-    height: 120px;
-    width: 1100px;
-    position: absolute;
-    
-}
-header .head-wrap .head-wrap-inner .head-logo{
-    position: absolute;
-    top:50px;
-    width:300px;
-    height:80px;
-}
-header .head-wrap .head-wrap-inner .head-menu-top-nav{
-    position: absolute;
-    right: -160px;
-    top:15px;
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
 }
 
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul{
-    list-style: none;
-}
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul li{
-    float: left;
-    font-size: 15px;
-    text-align:center;
-    height: 20px;
-}
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul li a{
-    text-decoration: none;
-}
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul li a:hover{
-    text-decoration: underline;
-}
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav01
-{
-    width:103px;
-}
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav02
-{
-    width:90px;
-}
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav03
-{
-    width:150px;
+body {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	color: #5a5a5a;
 }
 
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav04
-{
-    width: 90px;
+.carousel {
+	margin-bottom: 4rem;
 }
 
-header .head-wrap-sub ul li a:hover{
-    text-decoration: underline;
-    background-color: #2c2a29;
-    color:var( --color-font-green);
+.carousel-caption {
+	bottom: 3rem;
+	z-index: 10;
 }
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-    footer{
-    	position: absolute;
-    	bottom: 0;
-    }
-    
-    *{
-        font-family: 'Nanum Gothic', sans-serif;
-    }
-    .col-md1 {
-        float: left;
-        width: 20%;
-    }
-    .col-md2 {
-        float: left;
-        width: 28%;
-    }
-    .col-md3 {
-        float: left;
-        width: 21%;
-    }
-    .col-md4 {
-        float: left;
-        width: 21%;
-    }
 
-    .footer_aray {
-        border-bottom: lightgray 1px solid;
-    }
-    .footer-top {
-        color: rgb(231, 133, 110);
-        text-align: center;
-    }
-    footer a {
-        text-decoration: none;
-        color: black;
-    }
-    #footer-mid-size1 {
-        width: 268px;
-        text-align: right;
-    }
-    #footer-mid-size2 {
-        width: 251px;
-        text-align: right;
-    }
+.carousel-item {
+	height: 32rem;
+}
 
-    #footer-mid-size4 {
-        width: 312px;
-        text-align: right;
-    }
-    .footer-menu {
-        list-style: none;
-    }
-    #footer-menu-size1 {
-        width: 300px;
-        margin-left: 55px;
-    }
-    #footer-menu-size2 {
-        margin-left: 115px;
-    }
-    #footer-menu-size3 {
-        width: 300px;
-        padding-top: 15px;
-        margin-left: 63px;
-    }
-    #footer-menu-size4 {
-        width: 300px;
-        margin-left: 87px;
-    }
-    .footer_bottom {
-        width: 100%;
-        position:absolute;
-        top: 220px;
-        padding-left: 80px;
-        border-top: lightgray 1px solid;
-    }
+.carousel-item>img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 32rem;
+}
+
+.marketing .col-lg-4 {
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.marketing h2 {
+	font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+	margin-right: .75rem;
+	margin-left: .75rem;
+}
+
+.featurette-divider {
+	margin: 5rem 0;
+}
+
+.featurette-heading {
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -.05rem;
+}
+
+@media ( min-width : 40em) {
+	.carousel-caption p {
+		margin-bottom: 1.25rem;
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+	.featurette-heading {
+		font-size: 50px;
+	}
+}
+
+@media ( min-width : 62em) {
+	.featurette-heading {
+		margin-top: 7rem;
+	}
+}
+.footer-head {
+	color: rgb(216, 83, 55);
+}

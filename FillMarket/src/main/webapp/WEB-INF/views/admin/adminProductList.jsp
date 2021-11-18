@@ -46,12 +46,11 @@
 <body>
 <div id="container">
 			<section id="board-container" class="container" >
-<<<<<<< HEAD
 			<br />
 				<h1>상품관리</h1>
-=======
+
 				<p>총 ${totalContents }건의 게시물이 있습니다.</p>
->>>>>>> branch 'Hwan' of https://github.com/writer100/CanYouFillMarket.git
+
 				<input type="button" value="상품등록" id="btn-add" class="btn btn-outline-success" onclick="fn_goProductForm();"/>
 				<table id="tbl-board" class="table table-striped table-hover">
 					<tr>
